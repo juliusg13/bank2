@@ -6,22 +6,15 @@
       <%= f.input :password, required: true, hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length) %>
       <%= f.input :password_confirmation, required: true %>
 
-      <p>
-        <%= f.input :first_name, required: true, autofocus: true %>
-      </p>
 
-      <p>
-        <%= f.input :last_name, required: true, autofocus: true %>
-      </p>
+      <%= f.input :first_name, required: true, autofocus: true %>
 
-      <p>
-        <%= f.input :address_line_1, required: true, autofocus: true %>
-      </p>
+      <%= f.input :last_name, required: true, autofocus: true %>
 
-      <p>
-        <%= f.label :'Date of birth' %><br>
-        <%= f.input :dob, autofocus: true %>
-      </p>
+      <%= f.input :address_line_1, label: 'Address line', required: true, autofocus: true %>
+
+      <%= f.input :dob,label: 'Date of Birth', autofocus: true, :start_year => 1900 %>
+
     </div>
 
     <div class="form-actions">

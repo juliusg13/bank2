@@ -1,7 +1,7 @@
-
+<%= simple_form_for @user, authenticity_token: false do |f| %>
 <p>
   <strong>Name:</strong>
-  <%= @user.first_name %> <%= @user.last_name %>
+  <%= @user.full_name %>
 </p>
 
 <p>
@@ -10,8 +10,8 @@
 </p>
 
 <p>
-  <strong>Date:</strong>
+  <strong>Date of birth:</strong>
   <%= @user.dob %>
 </p>
 <br>
-
+<% end %>

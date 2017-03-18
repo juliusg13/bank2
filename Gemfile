@@ -61,4 +61,6 @@ gem 'sprockets', '~> 4.0.0.beta4'
 gem 'simple_form'
 gem  'bootstrap-sass'
 gem 'devise', '~> 4.2', '>= 4.2.1'
-gem 'bcrypt-ruby', '3.1.5', :require => 'bcrypt'
+gem 'bcrypt', platforms: :ruby
+gem 'twitter-bootstrap-rails'
+gem 'devise-bootstrap-views'
