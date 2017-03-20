@@ -1,8 +1,11 @@
 class User < ApplicationRecord
+  acts_as_token_authenticatable
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
+
+  has_many :transfers
 
   validates :first_name, presence: true, length: {maximum: 20}
   validates :last_name, presence: true, length: {maximum: 20}
@@ -14,7 +17,7 @@ class User < ApplicationRecord
   end
   def age
     now = Time.now.utc.to_date
-    now.year - dob.year - ((now.month > dob.month || (now.month == dob.month && now.day >= dob.day)) ? 0 : 1)
+    age = now.year - dob.year - ((now.month > dob.month || (now.month == dob.month && now.day >= dob.day)) ? 0 : 1)
   end
 end
 

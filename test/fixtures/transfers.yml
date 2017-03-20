@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  account_number_from: MyString
+  account_number_to: MyString
+  amount_pennies: 1
+  country_code_from: MyString
+  country_code_to: MyString
+  user: one
+
+two:
+  account_number_from: MyString
+  account_number_to: MyString
+  amount_pennies: 1
+  country_code_from: MyString
+  country_code_to: MyString
+  user: two

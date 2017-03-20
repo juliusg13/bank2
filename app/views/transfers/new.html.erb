@@ -1,0 +1,15 @@
+<%= simple_form_for([@user, @user.transfers.build]) do |f| %>
+    <%= f.error_notification %>
+    <div class="form-inputs">
+      <%= f.input :account_number_from, required: true, autofocus: true %>
+      <%= f.input :account_number_to, required: true, autofocus: true %>
+      <%= f.input :amount_pennies, required: true, autofocus: true %>
+      <%= f.input :country_code_from, required: true, autofocus: true %>
+      <%= f.input :country_code_to, required: true, autofocus: true %>
+
+    </div>
+
+    <div class="form-actions">
+      <%= f.button :submit, "Make transaction" %>
+    </div>
+<% end %>

@@ -64,3 +64,5 @@ gem 'devise', '~> 4.2', '>= 4.2.1'
 gem 'bcrypt', platforms: :ruby
 gem 'twitter-bootstrap-rails'
 gem 'devise-bootstrap-views'
+gem 'rack-cors', :require => 'rack/cors'
+gem 'simple_token_authentication', '~> 1.0' # see semver.org

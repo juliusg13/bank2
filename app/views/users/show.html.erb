@@ -3,6 +3,10 @@
   <strong>Name:</strong>
   <%= @user.full_name %>
 </p>
+<p>
+  <strong>Age:</strong>
+  <%= @user.age %>
+</p>
 
 <p>
   <strong>Address:</strong>
@@ -13,5 +17,32 @@
   <strong>Date of birth:</strong>
   <%= @user.dob %>
 </p>
-<br>
+
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th>Account number from:    </th>
+            <th>Account number to:    </th>
+            <th>Amount of pennies:    </th>
+            <th>Sending country code:    </th>
+            <th>Receiving country code:    </th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <% @user.transfers.each do |transfer| %>
+              <tr>
+                <td><%= transfer.account_number_to %></td>
+                <td><%= transfer.account_number_to %></td>
+                <td><%= transfer.amount_pennies %></td>
+                <td><%= transfer.country_code_from %></td>
+                <td><%= transfer.country_code_to %></td>
+              </tr>
+          <% end %>
+        </tbody>
+
+
+      </table>
+
+
 <% end %>
